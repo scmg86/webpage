@@ -1,0 +1,40 @@
+{
+    "jobs": [
+        {
+            "name": "Daily Morning Task",
+            "script": "example_task.py",
+            "schedule": {
+                "type": "daily",
+                "time": "09:00"
+            },
+            "enabled": true
+        },
+        {
+            "name": "Weekly Monday Report",
+            "script": "example_task.py",
+            "schedule": {
+                "type": "weekly",
+                "day": "monday",
+                "time": "10:00"
+            },
+            "enabled": true
+        },
+        {
+            "name": "Every 30 Minutes Check",
+            "script": "example_task.py",
+            "schedule": {
+                "type": "interval",
+                "minutes": 30
+            },
+            "enabled": false
+        },
+        {
+            "name": "Hourly Task",
+            "script": "example_task.py",
+            "schedule": {
+                "type": "hourly"
+            },
+            "enabled": false
+        }
+    ]
+}
