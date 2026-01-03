@@ -23,7 +23,7 @@ def main():
     print(f"Generated random number: {random_num}")
     
     # Example: Log something
-    with open('task_log.txt', 'a') as f:
+    with open('task_log.txt', 'a', encoding='utf-8') as f:
         f.write(f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')} - Task executed successfully. Random: {random_num}\n")
     
     print("Task completed!")

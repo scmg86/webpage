@@ -30,7 +30,7 @@ class ScriptScheduler:
             return
         
         try:
-            with open(self.config_file, 'r') as f:
+            with open(self.config_file, 'r', encoding='utf-8') as f:
                 config = json.load(f)
                 self.jobs = config.get('jobs', [])
                 print(f"Loaded {len(self.jobs)} job(s) from configuration.")
@@ -72,7 +72,7 @@ class ScriptScheduler:
             ]
         }
         
-        with open(self.config_file, 'w') as f:
+        with open(self.config_file, 'w', encoding='utf-8') as f:
             json.dump(example_config, f, indent=4)
         print(f"Created example configuration file: {self.config_file}")
     
